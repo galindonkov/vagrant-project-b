@@ -4,7 +4,7 @@ Vagrant.configure("2") do |config|
                   node.vm.box = "galindonkov/nginx64"
                   node.vm.hostname = vm_name
                   node.vm.network "private_network", ip: "192.168.56.#{57 + i}"
-                  node.vm.network "forwarded_port", guest: 80, host: 8080 + i
+                  node.vm.network "forwarded_port", guest: 80, host: 8080 + i, auto_correct: "true"
             end
       end
 end
