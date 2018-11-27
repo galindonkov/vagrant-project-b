@@ -30,6 +30,16 @@ web02                     running (virtualbox)
 
 - Above output is a proove that both virtual machines ```web01 and web02``` are created successfully and you can connect either to web01 by ```vagrant ssh web01``` or to web02 by ```vagrant ssh web02```
 
+- In order to test whether the web server work, connect to web01 or web02 first :
+     ```vagrant ssh web01/2```
+     - Check assigned ip address by : ```ip -4 a```
+     - Open the ip address into the browser and you should see message like below:
+     ```
+     Welcome to nginx!
+
+     If you see this page, the nginx web server is successfully installed and working. Further configuration is required.
+    ```
+    
 - Once you finish with the test type `exit` to leave the Vagrant-built virtual machine.
 
 - Bear in mind that the Vm will remain running, so in case it is not needed anymore you can either shut down the running machine Vagrant is managing by `vagrant halt` or using `vagrant destroy` to stop the running machine and destroy all resources that were created during the machine creation process.
